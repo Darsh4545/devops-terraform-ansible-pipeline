@@ -15,7 +15,7 @@ pipeline {
      stages {
           stage("Compile") {
                steps {
-                    sh "/usr/share/maven compile"
+                    bat "/usr/share/maven compile"
                }
           }
           stage("Unit test") {
