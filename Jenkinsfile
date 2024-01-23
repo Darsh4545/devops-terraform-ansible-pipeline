@@ -15,7 +15,7 @@ pipeline {
      stages {
           stage("Compile") {
                steps {
-                    sh "/opt/apache-maven-3.9.6/bin/mvn Compile"
+                    sh "/opt/apache-maven-3.9.6/bin compile"
                }
           }
           stage("Unit test") {
