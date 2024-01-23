@@ -55,7 +55,7 @@ pipeline {
                     sh 'docker version'
                     sh 'docker build -t devopswithdarshan-docker-webapp-demo .'
                     sh 'docker image list'
-                    sh 'docker tag devopswithdarshan-docker-webapp-demo darsh4545/devopswithdarshan-docker-webapp-demo:devopswithdeepak-docker-webapp-demo'
+                    sh 'docker tag devopswithdeepak-docker-webapp-demo deepak2717/devopswithdarshan-docker-webapp-demo:devopswithdeepak-docker-webapp-demo'
 		
                }
           }
@@ -69,7 +69,7 @@ pipeline {
 
          stage("Push Image to Docker Hub"){
                steps {
-                     sh 'docker push  darsh4545/devopswithdarshan-docker-webapp-demo:devopswithdarshan-docker-webapp-demo'
+                     sh 'docker push  deepak2717/devopswithdeepak-docker-webapp-demo:devopswithdeepak-docker-webapp-demo'
                 }
          }
          stage('Plan') {
