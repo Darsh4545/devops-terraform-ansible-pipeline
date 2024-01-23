@@ -27,7 +27,7 @@ pipeline {
 	  stage('SonarQube analysis') {
 	       steps {
                withSonarQubeEnv('sonarserver') {
-                   sh '/usr/bin/mvn sonar:sonar'
+                   sh '/opt/apache-maven-3.9.6/bin/mvn  sonar:sonar'
                    } // submitted SonarQube taskId is automatically attached to the pipeline context
 	       }
           }
@@ -47,7 +47,7 @@ pipeline {
      
           stage("Package") {
                steps {
-                     sh "/usr/share/maven  package"
+                     sh "/opt/apache-maven-3.9.6/bin/mvn   package"
                }
           }
          stage("Docker build"){
