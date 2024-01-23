@@ -15,12 +15,12 @@ pipeline {
      stages {
           stage("Compile") {
                steps {
-                    sh "/opt/apache-maven-3.9.6 Compile"
+                    sh "/opt/apache-maven-3.9.6/bin/mvn Compile"
                }
           }
           stage("Unit test") {
                steps {
-                    sh "/opt/apache-maven-3.9.6 test"
+                    sh "/opt/apache-maven-3.9.6/bin/mvn test"
                }
           }
 	     
