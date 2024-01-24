@@ -37,17 +37,17 @@
 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
-                    <version>3.1.0</version>
+                    <version>3.3.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-war-plugin</artifactId>
-                    <version>3.1.0</version>
+                    <version>3.3.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-source-plugin</artifactId>
-                    <version>3.1.0</version>
+                    <version>3.3.1</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -55,7 +55,7 @@
      <plugin>
                 <groupId>org.jfrog.buildinfo</groupId>
                 <artifactId>artifactory-maven-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.6.1</version>
                 <inherited>false</inherited>
                 <executions>
                     <execution>
@@ -75,7 +75,7 @@
                             <publisher>
                                 <contextUrl>http://localhost:8081/artifactory</contextUrl>
                                 <username>admin</username>
-                                <password>sonar123</password>
+                                <password>password</password>
                                 <repoKey>jenkins-release</repoKey>
                                 <snapshotRepoKey>jenkins-snapshot</snapshotRepoKey>
                             </publisher>
