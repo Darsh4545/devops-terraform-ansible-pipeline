@@ -15,19 +15,19 @@ pipeline {
      stages {
           stage("Compile") {
                steps {
-                    sh "/opt/apache-maven-3.9.6/bin/mvn compile"
+                    sh "/usr/share/maven compile"
                }
           }
           stage("Unit test") {
                steps {
-                    sh "/opt/apache-maven-3.9.6/bin/mvn test"
+                    sh "/usr/share/maven test"
                }
           }
 	     
 	  stage('SonarQube analysis') {
 	       steps {
                withSonarQubeEnv('sonarserver') {
-                   sh '/opt/apache-maven-3.9.6/bin/mvn  sonar:sonar'
+                   sh '/usr/share/maven sonar:sonar'
                    } // submitted SonarQube taskId is automatically attached to the pipeline context
 	       }
           }
@@ -47,7 +47,7 @@ pipeline {
      
           stage("Package") {
                steps {
-                     sh "/opt/apache-maven-3.9.6/bin/mvn   package"
+                     sh "/usr/share/maven  package"
                }
           }
          stage("Docker build"){
