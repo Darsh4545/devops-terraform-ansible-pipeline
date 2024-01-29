@@ -15,12 +15,12 @@ pipeline {
      stages {
           stage("Compile") {
                steps {
-                    sh "/usr/share/maven compile"
+                    sh "/usr/share/maven/bin compile"
                }
           }
           stage("Unit test") {
                steps {
-                    sh "/usr/share/maven test"
+                    sh "/usr/share/maven/bin test"
                }
           }
 	     
